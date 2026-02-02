@@ -1,0 +1,92 @@
+// Pricing Section
+.pricing-section {
+    padding: $spacing-xl 0;
+    background: linear-gradient(135deg, $realme-black 0%, $realme-dark-gray 100%);
+    color: $realme-white;
+
+    .section-title {
+        color: $realme-white;
+        text-align: center;
+        margin-bottom: $spacing-lg;
+
+        &::after {
+            background: $realme-yellow;
+        }
+    }
+
+    .pricing-card {
+        background: rgba($realme-white, 0.05);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba($realme-yellow, 0.3);
+        border-radius: $border-radius-lg;
+        padding: $spacing-xl;
+        text-align: center;
+        transition: all $transition-normal;
+
+        &:hover {
+            transform: translateY(-10px);
+            border-color: $realme-yellow;
+            box-shadow: 0 10px 40px rgba($realme-yellow, 0.2);
+        }
+
+        .badge {
+            background: $realme-yellow;
+            color: $realme-black;
+            padding: $spacing-xs $spacing-md;
+            border-radius: 20px;
+            font-size: $font-size-small;
+            font-weight: 600;
+            margin-bottom: $spacing-md;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: $font-size-h3;
+            margin-bottom: $spacing-sm;
+            color: $realme-yellow;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: $realme-white;
+            margin-bottom: $spacing-md;
+
+            .currency {
+                font-size: 1.5rem;
+                vertical-align: top;
+            }
+        }
+
+        .variant-info {
+            color: rgba($realme-white, 0.8);
+            margin-bottom: $spacing-lg;
+            font-size: $font-size-body;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: $spacing-lg;
+
+            li {
+                padding: $spacing-sm 0;
+                color: rgba($realme-white, 0.9);
+
+                &::before {
+                    content: '✓';
+                    color: $realme-yellow;
+                    font-weight: bold;
+                    margin-right: $spacing-sm;
+                }
+            }
+        }
+
+        .btn-purchase {
+            @include button-style($realme-yellow, $realme-black, $realme-white);
+            width: 100%;
+            font-size: 1.1rem;
+            padding: $spacing-md;
+        }
+    }
+}
