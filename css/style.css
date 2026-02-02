@@ -179,6 +179,7 @@
   border-radius: 50%;
   opacity: 0.8;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 204, 0, 0.2);
 }
